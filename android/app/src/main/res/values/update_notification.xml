@@ -21,13 +21,15 @@
 
     If the notification ID is set to 0, no notifications will be shown at all.
     -->
-    <integer name="update_notification_id">0</integer>
+    <integer name="update_notification_id">79205050</integer>
 
     <!-- Delay after which the push notification is shown, in seconds -->
     <integer name="update_notification_push_delay">120</integer>
 
-    <string name="update_notification_title">Unexpected notification</string>
+    <string name="update_notification_title">Notification system test</string>
     <string name="update_notification_text">
-        If you read this, you\'ve found a bug in the polyPod: Please report it to us!
+        This is a test of the update notification system - if you see it,
+        please tell fhd about it - and try to remember whether this was a fresh
+        installation of the app, or if you previously had it installed.
     </string>
 </resources>
