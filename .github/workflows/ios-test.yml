@@ -6,6 +6,7 @@ on:
       - 'core/**'
       - 'features/**'
       - 'build/**'
+      - '.github/workflows/ios-test.yaml'
   pull_request:
     paths:
       - 'ios/**'
