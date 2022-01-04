@@ -19,6 +19,12 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v2
+            - name: Cache installed dists
+              uses: actions/cache@v2
+              id: packages
+              with:
+                path: ./node_modules/
+                key: ${{ hashFiles('package-*.json') }}
             - uses: actions/setup-node@v1
               with:
                   node-version: 16
