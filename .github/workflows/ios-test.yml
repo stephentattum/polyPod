@@ -29,7 +29,7 @@ jobs:
               id: packages
               with:
                   path: ./node_modules/
-                  key: macos-${{ hashFiles('package-*.json') }}
+                  key: ${{ hashFiles('package-*.json') }}
             - name: Build core and features
               run: ./build.js
             - name: Build iOS
