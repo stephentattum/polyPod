@@ -1,18 +1,17 @@
 name: Testing polyPod in iOS
 on:
-  push:
-    paths:
-      - 'ios/**'
-      - 'core/**'
-      - 'features/**'
-      - 'build/**'
-      - .github/workflows/ios-test.yaml
-  pull_request:
-    paths:
-      - 'ios/**'
-      - 'core/**'
-      - 'features/**'
-      - 'build/**'
+    push:
+        paths:
+            - "ios/**"
+            - "core/**"
+            - "features/**"
+            - "build/**"
+    pull_request:
+        paths:
+            - "ios/**"
+            - "core/**"
+            - "features/**"
+            - "build/**"
 jobs:
     test:
         name: Testing polyPod iOS app
@@ -20,17 +19,17 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v2
-            - name: Cache installed dists
-              uses: actions/cache@v2
-              id: packages
-              with:
-                path: ./node_modules/
-                key: ${{ hashFiles('package-*.json') }}
             - uses: actions/setup-node@v1
               with:
                   node-version: 16
             - name: Lock xcode version
               run: sudo xcode-select -switch /Applications/Xcode_12.4.app
+            - name: Cache installed dists
+              uses: actions/cache@v2
+              id: packages
+              with:
+                  path: ./node_modules/
+                  key: macos-${{ hashFiles('package-*.json') }}
             - name: Build core and features
               run: ./build.js
             - name: Build iOS
