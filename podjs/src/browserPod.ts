@@ -36,19 +36,7 @@ class LocalStoragePolyIn implements PolyIn {
     }
 
     async select(matcher: Partial<Matcher>): Promise<RDF.Quad[]> {
-        return this.store.filter((quad: RDF.Quad) => {
-            if (!quad) return false;
-            if (matcher.subject && quad.subject.value != matcher.subject.value)
-                return false;
-            if (matcher.object && quad.object.value != matcher.object.value)
-                return false;
-            if (
-                matcher.predicate &&
-                quad.predicate.value != matcher.predicate.value
-            )
-                return false;
-            return true;
-        });
+        return this.match(matcher);
     }
 
     async add(...quads: RDF.Quad[]): Promise<void> {
