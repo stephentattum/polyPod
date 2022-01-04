@@ -56,7 +56,7 @@ test("Invalid command", async () => {
     expect(stderr).not.toEqual("");
 });
 
-// The following tests would be more robust when using stub data, but for the
+// The following tests would be more robust with stub data, but for the
 // sake of progress they are currently written against the actual packages.
 
 const parsePackageList = (stdout) =>
