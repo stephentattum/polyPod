@@ -1,6 +1,6 @@
 {
     "headline.main": "Number of entries",
-    "text.main": "Numbers here indicate the how often a company has mentioned in their privacy policy that transfer of a particular data type takes place. By using their services or visiting their website you have to accept this policy. (Data for German website only).",
+    "text.main": "Numbers here indicate how often a company has mentioned in their privacy policy that transfer of a particular data type takes place. To use their services or their website you first have to accept this policy. (Data for German website only).",
     "gaugeExplanation.entries": "Data Entries",
     "gaugeExplanation.first": "Max value for this company",
     "gaugeExplanation.second": "Max value for this company",
